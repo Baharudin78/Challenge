@@ -1,0 +1,31 @@
+[versions]
+core-ktx = "1.10.0"
+material-version = "1.9.0"
+navigation-ktx = "2.5.3"
+constraintlayout-version = "2.1.4"
+appcompat-ktx = "1.6.1"
+navigation-fragment-ktx = "2.5.3"
+lifecycle-extensions = "2.2.0"
+hilt-version = "2.44"
+coroutines-version = "1.6.4"
+viewmodel-ktx-version = "2.6.1"
+retrofit-version = "2.9.0"
+okhttp-version = "5.0.0-alpha.2"
+logging-interceptor-version = "4.9.0"
+
+junit-version = "4.13.2"
+junit-test = "1.1.5"
+espresso-core = "3.5.1"
+
+[libraries]
+androidx-core-core-ktx = {module = "androidx.core:core-ktx", version.ref = "core-ktx"}
+androidx-appcompat-appcompat = {module = "androidx.appcompat:appcompat", version.ref = "appcompat-ktx"}
+android-material-material = {module = "com.google.android.material:material", version.ref = "material-version"}
+constraintlayout-constraintlayout = {module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout-version"}
+navigation-fragment-ktx = {module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigation-fragment-ktx"}
+navigation-ui-ktx = {module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation-ktx"}
+junit-junit = {module = "junit:junit", version.ref = "junit-version"}
+androidx-test-ext-junit = {module = "androidx.test.ext:junit", version.ref = "junit-test"}
+espresso-core = {module = "androidx.test.espresso:espresso-core", version.ref = "espresso-core"}
+
+[plugins]
