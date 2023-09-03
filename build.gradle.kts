@@ -1,7 +1,12 @@
+import com.android.build.gradle.internal.tasks.getProjectNativeLibs
+
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
-    id("com.android.application") version "7.4.2" apply false
-    id("com.android.library") version "7.4.2" apply false
-    id("org.jetbrains.kotlin.android") version "1.8.0" apply false
-    id("com.google.dagger.hilt.android") version "2.44" apply false
+    alias(libs.plugins.android.applications) apply false
+    alias(libs.plugins.android.library) apply false
+    alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.hilt.plugins) apply false
+    alias(libs.plugins.parcelize.plugins) apply false
+    alias(libs.plugins.kotlin.kapt) apply false
+ //   alias(libs.plugins.devtools.ksp) apply false
 }
