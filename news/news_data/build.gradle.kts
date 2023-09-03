@@ -37,6 +37,8 @@ android {
 dependencies {
 
     implementation(project(":common:common_utils"))
+    implementation(project(":news:news_domain"))
+
     implementation(libs.androidx.core.core.ktx)
     implementation(libs.androidx.appcompat.appcompat)
     implementation(libs.android.material.material)
