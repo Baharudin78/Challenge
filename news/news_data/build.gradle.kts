@@ -1,12 +1,11 @@
 plugins {
-    alias(libs.plugins.android.applications)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.hilt.plugins)
     alias(libs.plugins.kotlin.kapt)
 }
 
 android {
-    namespace = "com.baharudin.news_data"
     compileSdk = 33
 
     defaultConfig {

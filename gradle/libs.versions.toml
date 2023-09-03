@@ -16,6 +16,7 @@ logging-interceptor-version = "4.9.0"
 glide-version = "4.15.1"
 chucker-version = "3.5.2"
 lottie-version = "3.4.0"
+swipeRefreshVersion = "1.1.0"
 
 junit-version = "4.13.2"
 junit-test = "1.1.5"
@@ -51,6 +52,7 @@ chucker-no-op = {module = "com.github.chuckerteam.chucker:library-no-op", versio
 activity-ktx = {module = "androidx.activity:activity-ktx", version.ref = "activity-ktx-version"}
 lifecycle-runtime = {module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "viewmodel-ktx-version"}
 lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie-version"}
+swipeRefresh = {module = "androidx.swiperefreshlayout:swiperefreshlayout", version.ref = "swipeRefreshVersion"}
 
 [bundles]
 hilt = ["hilt-android","hilt-compiler"]

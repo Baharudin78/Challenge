@@ -1,10 +1,11 @@
 plugins {
-    id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.hilt.plugins)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 android {
-    namespace = "com.baharudin.news_presentation"
     compileSdk = 33
 
     defaultConfig {
@@ -12,7 +13,6 @@ android {
         targetSdk = 33
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -31,11 +31,15 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
 
     implementation(project(":common:common_utils"))
+    implementation(project(":news:news_domain"))
     implementation(libs.androidx.core.core.ktx)
     implementation(libs.androidx.appcompat.appcompat)
     implementation(libs.android.material.material)
@@ -43,4 +47,13 @@ dependencies {
     testImplementation(libs.junit.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation(libs.lifecycle.viewmodel)
+
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+
+    implementation(libs.bundles.coroutine.bundle)
+    implementation(libs.glide)
+    implementation(libs.activity.ktx)
+    implementation(libs.swipeRefresh)
 }

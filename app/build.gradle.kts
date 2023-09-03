@@ -49,6 +49,8 @@ dependencies {
 
     implementation(project(":search:search_presentation"))
     implementation(project(":news:news_presentation"))
+    implementation(project(":news:news_domain"))
+    implementation(project(":news:news_data"))
     implementation(project(":common:common_utils"))
 
     implementation(libs.androidx.core.core.ktx)

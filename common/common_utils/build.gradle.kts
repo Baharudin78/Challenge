@@ -1,12 +1,11 @@
 plugins {
-    alias(libs.plugins.android.applications)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.hilt.plugins)
     alias(libs.plugins.kotlin.kapt)
 }
 
 android {
-    namespace = "com.baharudin.common_utils"
     compileSdk = 33
 
     defaultConfig {
@@ -47,5 +46,7 @@ dependencies {
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
 
+   // implementation(libs.chucker.no.op)
+    implementation(libs.chucker)
     implementation(libs.bundles.retrofit.bundle)
 }
