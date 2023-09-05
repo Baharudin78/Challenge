@@ -11,15 +11,12 @@ class NewsRepositoryImpl(
     private val newsArticleDAO: NewsDAO
 ) : NewsRepository {
     override suspend fun getNewsArticle(): List<Article> {
-        try {
+        return try {
             val loadFromLocal = newsApiService.getNewsArticle().articles.map { it.toArticle() }
             newsArticleDAO.insertList(loadFromLocal)
             newsArticleDAO.getListArticles()
         } catch (e: Exception) {
             newsArticleDAO.getListArticles()
-        }
-        return newsApiService.getNewsArticle().articles.map {
-            it.toArticle()
         }
     }
 }
