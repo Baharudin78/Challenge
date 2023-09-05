@@ -25,6 +25,7 @@ espresso-core = "3.5.1"
 androidGradle-version = "7.4.2"
 kotlin-version = "1.8.0"
 ksp-version = "1.8.0-1.0.9"
+room_version = "2.5.0"
 
 
 [libraries]
@@ -53,6 +54,9 @@ activity-ktx = {module = "androidx.activity:activity-ktx", version.ref = "activi
 lifecycle-runtime = {module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "viewmodel-ktx-version"}
 lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie-version"}
 swipeRefresh = {module = "androidx.swiperefreshlayout:swiperefreshlayout", version.ref = "swipeRefreshVersion"}
+room-compiler = {module = "androidx.room:room-compiler", version.ref = "room_version"}
+room-ktx = {module = "androidx.room:room-ktx", version.ref = "room_version"}
+
 
 [bundles]
 hilt = ["hilt-android","hilt-compiler"]
@@ -67,4 +71,4 @@ kotlin-android = {id = "org.jetbrains.kotlin.android", version.ref = "kotlin-ver
 hilt-plugins = {id = "com.google.dagger.hilt.android", version.ref = "hilt-version"}
 parcelize-plugins = {id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin-version"}
 kotlin-kapt  = {id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin-version"}
-devtools-ksp = {id = "com.com.google.devtools.ksp", version.ref = "ksp-version"}
+devtools-ksp = {id = "com.google.devtools.ksp", version.ref = "ksp-version"}

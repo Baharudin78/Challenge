@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.hilt.plugins)
     alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.devtools.ksp)
 }
 
 android {
@@ -46,4 +47,7 @@ dependencies {
 
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
+
+    implementation(libs.room.ktx)
+    ksp(libs.room.compiler)
 }

@@ -8,5 +8,5 @@ plugins {
     alias(libs.plugins.hilt.plugins) apply false
     alias(libs.plugins.parcelize.plugins) apply false
     alias(libs.plugins.kotlin.kapt) apply false
- //   alias(libs.plugins.devtools.ksp) apply false
+    alias(libs.plugins.devtools.ksp) apply false
 }

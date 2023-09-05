@@ -1,6 +1,8 @@
 package com.baharudin.challange
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
@@ -28,7 +30,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        navigationProvider.getActivity(Activities.NewsActivity).navigate(this@MainActivity)
+        Handler(Looper.myLooper()!!).postDelayed({
+            navigationProvider.getActivity(Activities.NewsActivity).navigate(this@MainActivity)
+            finish()
+        }, 1000)
 
     }
 }

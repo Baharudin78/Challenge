@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.hilt.plugins)
     alias(libs.plugins.parcelize.plugins)
     alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.devtools.ksp)
 }
 
 android {
@@ -74,5 +75,8 @@ dependencies {
     implementation(libs.activity.ktx)
     implementation(libs.lifecycle.runtime)
     implementation(libs.lottie)
+
+    implementation(libs.room.ktx)
+    ksp(libs.room.compiler)
 }
 
